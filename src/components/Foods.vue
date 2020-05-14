@@ -13,13 +13,15 @@
     </div>
     <div class="row">
         <div class="col-md-3" v-for="result in results" :key="result.idMeal" style="text-align: center;">
-          <div class="card" style="width: 15rem; height: 90%;">
-            <img class="card-img-top" :src="result.strMealThumb">
-            <div class="card-body">
-              <h5 class="card-title">{{result.strMeal}}</h5>
-             <span class="badge badge-pill badge-primary">{{result.strCategory}}</span>
+          <router-link :to="{ name: 'Detail', params: { id: result.idMeal } }">
+            <div class="card" style="width: 15rem; height: 90%;">
+              <img class="card-img-top" :src="result.strMealThumb">
+              <div class="card-body">
+                <h5 class="card-title">{{result.strMeal}}</h5>
+              <span class="badge badge-pill badge-primary">{{result.strCategory}}</span>
+              </div>
             </div>
-          </div>`
+          </router-link>
         </div>
     </div>
   </div>
