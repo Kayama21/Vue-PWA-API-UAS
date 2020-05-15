@@ -2,9 +2,9 @@
   <div class="container">
       <!-- <h1>This is a search page</h1> -->
     <div class="row">
-        <div class="col-md-3" v-for="result in results" :key="result.idMeal" style="text-align: center;">
+        <div class="col-md-3 mb-3" v-for="result in results" :key="result.idMeal" style="text-align: center;">
             <router-link :to="{ name: 'Detail', params: { id: result.idMeal } }">
-            <div class="card" style="width: 15rem; height: 90%;">
+            <div class="card" style="width: 15rem; height: 100%;">
               <img class="card-img-top" :src="result.strMealThumb">
               <div class="card-body">
                 <h5 class="card-title">{{ result.strMeal }}</h5>
@@ -28,7 +28,7 @@ export default {
   mounted () {
     axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?', {
       params: {
-        c: this.$route.params.name
+        a: this.$route.params.name
       }
     })
       .then(response => {

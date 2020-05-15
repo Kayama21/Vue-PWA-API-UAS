@@ -1,16 +1,16 @@
 <template>
   <div>
-  <Categories />
+  <FilterArea />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Categories from '@/components/Categories.vue'
+import FilterArea from '@/components/FilterArea.vue'
 
 export default {
   components: {
-    Categories
+    FilterArea
   }
 }
 </script>
