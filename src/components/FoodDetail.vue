@@ -5,7 +5,7 @@
           <img class="card" :src="result.strMealThumb" width="100%">
         </div>
         <div class="col-md-7 mb-3" style="text-align: left;">
-          <h2> {{ result.strMeal }} </h2>
+          <h2 style="font-size: 48px; color: green"> {{ result.strMeal }} </h2>
           <h4> Category : {{ result.strCategory }} </h4>
           <h4> Origin : {{ result.strArea }} </h4>
           <h4> Tags : {{ result.strTags }} </h4>

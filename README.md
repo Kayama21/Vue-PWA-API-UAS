@@ -1,5 +1,10 @@
 # testing-api
 
+## Username & Password
+```
+admin & admin
+```
+
 ## Project setup
 ```
 npm install

@@ -11,16 +11,16 @@
     </div>
     <div class="row">
         <div class="col-md-3 mb-4" v-for="result in results" :key="result.idMeal" style="text-align: center;">
-          <router-link :to="{ name: 'Detail', params: { id: result.idMeal } }">
             <div class="card" style="width: 15rem; height: 100%;">
+              <router-link :to="{ name: 'Detail', params: { id: result.idMeal } }">
               <img class="card-img-top" :src="result.strMealThumb">
               <div class="card-body">
                 <h5 class="card-title">{{result.strMeal}}</h5>
                 <span class="badge badge-pill badge-primary">{{result.strCategory}}</span>
               </div>
+              </router-link>
+              <button class="btn-danger" style="border-radius: 8%" @click="addFav(result.idMeal,result.strMealThumb,result.strMeal,result.strCategory)">Save</button>
             </div>
-          </router-link>
-          <button @click="addFav(result.idMeal,result.strMealThumb,result.strMeal,result.strCategory)">Save</button>
         </div>
     </div>
   </div>

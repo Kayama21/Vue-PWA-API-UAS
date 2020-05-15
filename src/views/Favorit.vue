@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
         <div class="col-md-3 mb-4" v-for="result in fav" :key="result.id" style="text-align: center;">
           <router-link :to="{ name: 'Detail', params: { id: result.id } }">
